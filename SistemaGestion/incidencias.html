@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Incidencias</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Incidencias</h2>
+        <form id="incidencia-form">
+            <h3>Información del Equipo</h3>
+            <label for="id-equipo">ID del Equipo:</label>
+            <input type="text" id="id-equipo" required>
+            
+            <label for="num-serie">Número de Serie:</label>
+            <input type="text" id="num-serie" required>
+            
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" required>
+
+            <label for="tipo-equipo">Tipo de Equipo:</label>
+            <select id="tipo-equipo" required>
+                <option value="Escritorio">Escritorio</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Servidor">Servidor</option>
+                <option value="Impresora">Impresora</option>
+                <option value="Escáner">Escáner</option>
+            </select>
+
+            <h3>Especificaciones Técnicas</h3>
+            <label for="procesador">Procesador:</label>
+            <input type="text" id="procesador" required>
+
+            <label for="ram">Memoria RAM:</label>
+            <input type="text" id="ram" required>
+
+            <label for="almacenamiento">Tipo de Almacenamiento:</label>
+            <select id="almacenamiento" required>
+                <option value="HDD">HDD</option>
+                <option value="SSD">SSD</option>
+                <option value="NVMe">NVMe</option>
+            </select>
+
+            <label for="capacidad-almacenamiento">Capacidad de Almacenamiento:</label>
+            <input type="text" id="capacidad-almacenamiento" required>
+
+            <label for="gpu">Tarjeta Gráfica:</label>
+            <input type="text" id="gpu" required>
+
+            <label for="os">Sistema Operativo:</label>
+            <input type="text" id="os" required>
+
+            <h3>Información de la Incidencia</h3>
+            <label for="descripcion">Descripción del Problema:</label>
+            <textarea id="descripcion" required></textarea>
+
+            <label for="ubicacion">Ubicación de la Incidencia:</label>
+            <select id="ubicacion" required>
+                <option value="Dirección">Dirección</option>
+                <option value="Subdirección">Subdirección</option>
+                <option value="Departamento">Departamento</option>
+                <option value="Oficina/cubículo">Oficina/cubículo</option>
+            </select>
+
+            <label for="horario">Horario Disponible:</label>
+            <input type="text" id="horario" required>
+
+            <button type="submit">Enviar Incidencia</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("incidencia-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Incidencia registrada correctamente");
+            // Aquí después conectas la base de datos para enviar los datos
+        });
+    </script>
+</body>
+</html>
